@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+
+<?import javafx.scene.control.Button?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.jumedev.sialdo.controllers.SupervisorController"
+            stylesheets="@style.css"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Label layoutX="200" layoutY="180" text="Bienvenido Supervisor!" />
+        <Button fx:id="btnCerrarSesion"
+                text="Cerrar Sesión"
+                onAction="#handleLogout"
+                layoutX="550" layoutY="450"
+                styleClass="btn-logout"  />
+    </children>
+</AnchorPane>

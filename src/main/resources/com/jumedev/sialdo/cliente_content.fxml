@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="15" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      padding="20">
+
+    <Label text="INICIO" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <!-- Pagos pendientes -->
+    <VBox spacing="5">
+        <Label text="Pagos pendientes" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+        <TableView fx:id="tablaPagosPendientes" prefHeight="150">
+            <columns>
+                <TableColumn text="Código Contrato" prefWidth="120"/>
+                <TableColumn text="Nombre de Cliente" prefWidth="140"/>
+                <TableColumn text="Tipo de Alquiler" prefWidth="120"/>
+                <TableColumn text="Tipo de Inmueble" prefWidth="120"/>
+                <TableColumn text="Número de Período" prefWidth="130"/>
+                <TableColumn text="Fecha Límite" prefWidth="120"/>
+            </columns>
+        </TableView>
+    </VBox>
+
+    <!-- Deudas pendientes -->
+    <VBox spacing="5">
+        <Label text="Deudas pendientes" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+        <TableView fx:id="tablaDeudasPendientes" prefHeight="150">
+            <columns>
+                <TableColumn text="Código Contrato" prefWidth="120"/>
+                <TableColumn text="Nombre de Cliente" prefWidth="140"/>
+                <TableColumn text="Tipo de Alquiler" prefWidth="120"/>
+                <TableColumn text="Tipo de Inmueble" prefWidth="120"/>
+                <TableColumn text="Número de Período" prefWidth="130"/>
+                <TableColumn text="Monto Deuda" prefWidth="120"/>
+            </columns>
+        </TableView>
+    </VBox>
+</VBox>
