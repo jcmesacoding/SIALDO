@@ -1,6 +1,5 @@
 package com.jumedev.sialdo.models;
 
-
 public class SessionManager {
     private static Usuario currentUser;
 
@@ -16,7 +15,4 @@ public class SessionManager {
         currentUser = null;
     }
 
-    public static void setUsuarioActual(Usuario usuario) {
-
-    }
 }

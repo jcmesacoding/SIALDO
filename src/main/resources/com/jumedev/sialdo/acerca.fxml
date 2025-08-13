@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.jumedev.sialdo.controllers.InicioController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="366.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" style="-fx-background-color: #E1E1E1;">
+   <children>
+      <Label layoutX="31.0" layoutY="14.0" prefHeight="39.0" prefWidth="164.0" text="Open Source" style="-fx-font-size: 24px; -fx-font-weight: bold;">
+      </Label>
+      <Label layoutX="28.0" layoutY="67.0" prefHeight="46.0" prefWidth="334.0" wrapText="true"
+             text="Este sistema se publica bajo los términos de la licencia MIT."
+             style="-fx-font-size: 15px;">
+      </Label>
+      <Label layoutX="31.0" layoutY="120.0" prefHeight="212.0" prefWidth="327.0" wrapText="true"
+             text="EL SOFTWARE SE PROPORCIONA TAL CUAL. SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA. EN NINGÚN CASO EL CREADOR DEL SOFTWARE SERÁ RESPONSABLE DE CUALQUIER RECLAMO, DAÑO U OTRA RESPONSABILIDAD. YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O DE OTRO MODO, QUE SURJA DE, FUERA DE O EN RELACIÓN CON EL SOFTWARE O EL USO U OTRAS NEGOCIACIONES EN EL SOFTWARE."
+             style="-fx-font-size: 15px;">
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="361.0" prefHeight="25.0" prefWidth="366.0"
+             text="Desarrollado por Juan Mesa (JumeDev)"
+             style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #951ac9;">
+      </Label>
+   </children>
 </AnchorPane>

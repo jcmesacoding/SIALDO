@@ -1,36 +1,64 @@
-<?import javafx.scene.layout.BorderPane?>
+<?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<BorderPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.jumedev.sialdo.controllers.InicioController"
-            stylesheets="@style.css">
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="450" prefWidth="700" stylesheets="@style.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jumedev.sialdo.controllers.InicioController">
 
     <!-- Sidebar -->
     <left>
-        <VBox styleClass="sidebar">
-            <Label text="SIALDO" styleClass="sidebar-title"/>
-            <Button styleClass="sidebar-button" text="🏠 Inicio" onAction="#loadInicio"/>
-            <Button styleClass="sidebar-button" text="👤 Mis Datos" onAction="#loadMisDatos"/>
-            <Button styleClass="sidebar-button" text="🛠 Configuración" onAction="#loadConfiguracion"/>
-            <Button fx:id="btnAlquiler" styleClass="sidebar-button" text="📋 Alquiler" onAction="#loadAlquiler"/>
-            <Button styleClass="sidebar-button" text="💲 Pagos" onAction="#loadPagos"/>
-            <Button fx:id="btnResumen" styleClass="sidebar-button" text="📊 Resumen" onAction="#loadResumen"/>
-            <Button styleClass="sidebar-button" text="ℹ Acerca de" onAction="#loadAcerca"/>
+        <VBox prefWidth="278.0" styleClass="sidebar">
+            <Label styleClass="sidebar-title" text="SIALDO" />
+            <Button fx:id="btnInicio" onAction="#loadInicio" prefHeight="34.0" prefWidth="179.0" styleClass="sidebar-button" text="  🏠 Inicio" />
+            <Button fx:id="btnMisDatos" onAction="#loadMisDatos" prefHeight="34.0" prefWidth="180.0" styleClass="sidebar-button" text="  👤 Mis Datos" />
+         <MenuButton fx:id="btnConfig" mnemonicParsing="false" onAction="#loadConfiguracion" popupSide="RIGHT" prefHeight="44.0" prefWidth="178.0" styleClass="sidebar-button" text="🛠 Config.">
+            <items>
+               <MenuItem mnemonicParsing="false" text="Tipo Inmueble" onAction="#loadInmueble"/>
+               <MenuItem mnemonicParsing="false" text="Inmueble" onAction="#loadInmueble"/>
+               <MenuItem mnemonicParsing="false" text="Tipo Alquiler" onAction="#loadTipoAlquiler"/>
+               <MenuItem mnemonicParsing="false" text="Tipo Moneda" onAction="#loadTipoMoneda"/>
+            </items>
+         </MenuButton>
+         <MenuButton fx:id="btnAlquiler" mnemonicParsing="false" onAction="#loadAlquiler" popupSide="RIGHT" prefHeight="44.0" prefWidth="175.0" styleClass="sidebar-button" text="📋 Alquiler">
+            <items>
+               <MenuItem mnemonicParsing="false" text="Registrar nuevo" onAction="#loadRegistrar"/>
+               <MenuItem mnemonicParsing="false" text="Ver historial" onAction="#loadHistorialAlquiler"/>
+            </items>
+         </MenuButton>
+         <MenuButton fx:id="btnPagos" mnemonicParsing="false" onAction="#loadPagos" popupSide="RIGHT" prefHeight="44.0" prefWidth="181.0" styleClass="sidebar-button" text="💲 Pagos">
+           <items>
+             <MenuItem mnemonicParsing="false" text="Registrar por alquiler" onAction="#loadPagoAlquiler"/>
+             <MenuItem mnemonicParsing="false" text="Registrar por deuda" onAction="#loadInmueble"/>
+               <MenuItem mnemonicParsing="false" text="Ver historial" onAction="#loadHistorialPagos"/>
+           </items>
+         </MenuButton>
+            <Button fx:id="btnResumen" onAction="#loadResumen" prefHeight="34.0" prefWidth="172.0" styleClass="sidebar-button" text="   📊 Resumen" />
+            <Button fx:id="btnAcercaDe" onAction="#loadAcerca" prefHeight="34.0" prefWidth="185.0" styleClass="sidebar-button" text="   ℹ Acerca de" />
         </VBox>
     </left>
 
     <!-- Encabezado -->
     <top>
         <HBox styleClass="topbar">
-            <Label fx:id="lblUsuario" text="Usuario: Admin" styleClass="text-lbl-button" />
-            <Label fx:id="lblFecha" text="Fecha: 2025-07-08" styleClass="text-lbl-button"/>
-            <Region fx:id="spacer" HBox.hgrow="ALWAYS"/>
-            <Button text="⏻ Salir" onAction="#handleLogout" styleClass="logout-button"/>
+            <Label fx:id="lblUsuario" prefHeight="18.0" prefWidth="165.0" styleClass="text-lbl-button" text="Usuario: Admin" />
+            <Label fx:id="lblFecha" styleClass="text-lbl-button" text="Fecha: 2025-07-08" />
+            <Region fx:id="spacer" HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnCerrarSesion"
+                    text="Cerrar Sesión"
+                    onAction="#handleLogout"
+                    layoutX="550" layoutY="450"
+                    styleClass="btn-logout" >
+            <font>
+               <Font size="14.0" />
+            </font></Button>
         </HBox>
     </top>
 

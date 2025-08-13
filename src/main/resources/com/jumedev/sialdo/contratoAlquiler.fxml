@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml"
+            prefWidth="950" prefHeight="600">
+
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <!-- Título principal -->
+            <Label text="CONTRATO DE ALQUILER" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+            <!-- Código y fecha -->
+            <GridPane hgap="10" vgap="10">
+                <Label text="Codigo de Contrato:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                <Label text="Fecha registro alquiler:" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+            </GridPane>
+
+            <!-- Información del inquilino -->
+            <TitledPane text="INFORMACIÓN DEL INQUILINO" expanded="true">
+                <GridPane hgap="10" vgap="10">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                    <Label text="Nombre Completo: (*)" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <TextField GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                    <Label text="Tipo Documento: (*)" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                    <TextField GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+                    <Label text="Número Documento: (*)" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <TextField GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                    <Label text="Numero Telefono / Celular:" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                    <TextField GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+                    <Label text="Correo Electronico:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <TextField GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+                    <Label text="Nacionalidad:" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                    <TextField GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+                </GridPane>
+            </TitledPane>
+
+            <!-- Información del inmueble -->
+            <TitledPane text="INFORMACIÓN DEL INMUEBLE" expanded="true">
+                <GridPane hgap="10" vgap="10">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                    <Label text="Codigo Inmueble: (*)" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <TextField GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                    <Label text="Tipo Inmueble: (*)" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                    <TextField GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+                    <Label text="Descripcion Inmueble: (*)" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="2"/>
+
+                    <Button text="🔍" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+                    <TextField prefWidth="40" GridPane.columnIndex="4" GridPane.rowIndex="1"/>
+                </GridPane>
+            </TitledPane>
+
+            <!-- Información del alquiler -->
+            <TitledPane text="INFORMACIÓN DEL ALQUILER" expanded="true">
+                <GridPane hgap="10" vgap="10">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                    <Label text="Tipo Alquiler:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <ComboBox GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                    <Label text="Cantidad de Periodos:" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                    <Spinner min="1" max="120" initialValue="1" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+                    <Label text="Tipo Moneda:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <ComboBox GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                    <Label text="Precio Alquiler: (*)" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                    <TextField GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+                    <Label text="Fecha Inicio Alquiler:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+                    <Button text="Agregar Cláusulas" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.columnSpan="2"/>
+                </GridPane>
+            </TitledPane>
+
+            <!-- Botón registrar -->
+            <HBox alignment="center_right">
+                <Button text="Registrar" style="-fx-background-color: #2b78e4; -fx-text-fill: white; -fx-font-weight: bold;"/>
+            </HBox>
+
+        </VBox>
+    </center>
+</BorderPane>

@@ -10,6 +10,9 @@ module com.jumedev.sialdo {
     requires eu.hansolo.tilesfx;
     requires java.sql;
     requires java.desktop;
+    requires java.net.http;
+    requires com.fasterxml.jackson.databind;
+    requires jbcrypt;
 
     opens com.jumedev.sialdo to javafx.fxml;
     exports com.jumedev.sialdo;

@@ -4,8 +4,7 @@
 <?import javafx.geometry.Insets?>
 
 <VBox spacing="15" xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      padding="20">
+      xmlns:fx="http://javafx.com/fxml">
 
     <Label text="INICIO" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
 
