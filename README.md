@@ -99,7 +99,7 @@ Usuario: cliente    | Contraseña: 789
 - Seguridad con hash de contraseñas (BCrypt o similar).
 
 ## 👨‍💻 Autor
-Juan Carlos Mesa – @jcmesacoding
+Juan Carlos Mesa – @jcmesacoding [https://www.jumedev.com]
 
 Email: mesacruzjc@gmail.com
 
